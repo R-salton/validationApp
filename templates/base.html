@@ -1,0 +1,50 @@
+{% load static %}  <!-- Add this line at the top of your template -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Register Participant{% endblock %}</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+
+
+</head>
+<body>
+<div class='navbar' >
+    <div class='logo'>
+        <img src='https://www.creativefabrica.com/wp-content/uploads/2022/06/02/Taxi-car-driver-drive-icon-Graphics-31598657-1.jpg' alt=''>
+        <h5>Safe Drive</h5>
+    </h4></div>
+
+    <div class='nav_links'>
+        <ul>
+            <a href="{% url 'home' %}" ><li>Home</li></a>
+            <a href="{% url 'logs' %}" ><li>Loggs</li></a>
+            <a href="{% url 'register' %}" ><li>Register Perticipant</li></a>
+            <li>View Cars</li>
+            <li>About</li>
+        </ul>
+    </div>
+</div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add these lines to the head section of your HTML file -->
+    <script src="{% static 'JS/scripts.js' %}"></script>
+   
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

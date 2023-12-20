@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+body{
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.btn{
+    padding: 10px;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 45px;
+    position: sticky;
+    top: 0;
+    z-index: 1122;
+    
+}
+
+.navbar .logo{
+    height: 45px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+
+}
+.navbar .logo img{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar .logo h5{
+    font-size: .9rem;
+    width: 60%;
+    color: #0069D9;
+    font-weight: 700;
+}
+
+.nav_links ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+   
+}
+.nav_links ul a{
+    text-decoration: none;
+    color:inherit;
+}
+.nav_links ul li{
+    list-style: none;
+    font-weight: 400;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    font-size: .85rem;
+}
+.nav_links ul li:hover{
+    color: #0069D9;
+}
+.title{
+    color: #fff;
+    font-weight: 600;
+}
+
+.main-form{
+    border: 2px solid lightblue;
+    height: 85vh;
+    width: 550px;
+    padding: 10px;
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 10px
+}
+
+.col-md-12 {
+    height: 30vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    grid-gap: 5px; /* Adjust the gap between grid items as needed */
+    align-items: center;
+
+}
+
+
+.col-md-6 .form-control {
+padding: 0px;
+font-size: 0.9rem;
+width: 100%;
+height: 30px;
+margin-top: 0px;
+}
+
+.btn{
+padding: 0px 10px;
+display: file;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.add_card {
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    margin-top: 45px;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 90vh;
+    background-color: #fff; /* Add background color as needed */
+    border: 1px solid #ccc; /* Add border styles as needed */
+    padding: 20px; /* Add padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow as needed */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.model{
+    
+}
+
+@media only screen and (max-width: 768px){
+
+.col-md-6 {
+    height: 30vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns with equal width */
+    grid-gap: 5px; /* Adjust the gap between grid items as needed */
+    align-items: center;
+
+}
+}
+
+
+
+/* Registration Form for User */
+
+.signup_body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0faff;
+  }
+
+.wrapper {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px
+      30px
+      120px;
+    background: #4070f4;
+    box-shadow: 0
+      5px
+      10px
+      rgba(
+        0,
+        0,
+        0,
+        0.1
+      );
+    overflow: hidden;
+    z-index: 1;
+  }
+  .form.login {
+    position: absolute;
+    left: 50%;
+    bottom: -86%;
+    transform: translateX(
+      -50%
+    );
+    width: calc(
+      100% +
+        220px
+    );
+    padding: 20px
+      140px;
+    border-radius: 50%;
+    height: 100%;
+    background: #fff;
+    transition: all
+      0.6s
+      ease;
+  }
+  .wrapper.active
+    .form.login {
+    bottom: -16%;
+    border-radius: 35%;
+    box-shadow: 0 -5px
+      10px rgba(0, 0, 0, 0.1);
+  }
+  .form
+    header {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .form.login
+    header {
+    color: #333;
+    opacity: 0.8;
+  }
+  .wrapper.active
+    .form.login
+    header {
+    opacity: 1;
+  }
+  .wrapper.active
+    .signup
+    header {
+    opacity: 0.8;
+  }
+  .wrapper
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  form
+    input {
+    height: 35px;
+    outline: none;
+    border: none;
+    padding: 2px
+      15px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    background: #fff;
+  }
+  form
+    button{
+        height: 30px;
+        color: #4070f4;
+        margin-button: 30px;
+    }
+  .form.login
+    input {
+    border: 1px
+      solid
+      #aaa;
+      padding: 3px 10px;
+      font-size: .8rem;
+      height: 35px;
+  }
+  .form.login
+    input:focus {
+    box-shadow: 0
+      1px 0
+      #ddd;
+  }
+  .signup
+    .sign_up_socials{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+  }
+  .sign_up_socials .social{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+
+  .sign_up_socials i{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    color: #4070f4;
+    font-weight: 500;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+ 
+  form a {
+    color: #333;
+    text-decoration: none;
+  }
+  form
+    a:hover {
+    text-decoration: underline;
+  }
+  form
+    input[type="submit"] {
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .form.login
+    input[type="submit"] {
+    background: #4070f4;
+    color: #fff;
+    border: none;
+  }
+  

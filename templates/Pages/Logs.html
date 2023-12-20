@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 bg-light">
+    <h2 class="mb-4">Audit Logs</h2>
+
+    <!-- CRUD Events Table -->
+    <h3>CRUD Events</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>DateTime</th>
+                <th>User</th>
+                <th>Event Type</th>
+                <!-- Add more headers as necessary -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in crud_events %}
+            <tr>
+                <td>{{ event.datetime }}</td>
+                <td>{{ event.user }}</td>
+                <td>{{ event.event_type }}</td>
+                <!-- Add more columns as necessary -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Login Events Table -->
+    <h3>Login Events</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>DateTime</th>
+                <th>User</th>
+                <th>Event Type</th>
+                <!-- Add more headers as necessary -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in login_events %}
+            <tr>
+                <td>{{ event.datetime }}</td>
+                <td>{{ event.user }}</td>
+                <td>{{ event.event_type }}</td>
+                <!-- Add more columns as necessary -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Request Events Table -->
+    <h3>Request Events</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>DateTime</th>
+                <th>User</th>
+                <th>Event Type</th>
+                <!-- Add more headers as necessary -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in request_events %}
+            <tr>
+                <td>{{ event.datetime }}</td>
+                <td>{{ event.user }}</td>
+                <td>{{ event.event_type }}</td>
+                <!-- Add more columns as necessary -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

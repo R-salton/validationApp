@@ -1,0 +1,36 @@
+
+<!-- Validation/register_participant.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4 title">Register Participant with Cars</h2>
+
+    <form method="post" id="participant-form" class="main-form">
+        {% csrf_token %}
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                {{ participant_form.as_p }}
+                <button type="button" class="btn btn-primary mt-3 btn-block" id="addCarBtn"><i class="ri-roadster-line"></i> Add Car</button>
+                <button type="submit" class="btn btn-primary mt-3 btn-block">Register</button>
+            </div>
+
+            <div class="col-md-6 add_card display">
+                <div class='model' >
+
+                    <h4>Add Car</h4>
+                    {{ car_formset.management_form }}
+                    {% for form in car_formset %}
+                        {{ form.as_table }}
+                    {% endfor %}
+    
+                    <button class="btn btn-primary mt-3 btn-block" id='close' >Close</button>
+               
+                </div>
+            </div>
+        </div>
+    </form>
+  
+</div>
+{% endblock %}
