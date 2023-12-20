@@ -2,13 +2,13 @@
 ## 1: Installing Requirements
 Run: ```pip install requirements.txt``` to install requirements
 ## 2: Setting .env File for Credentials
-## 1. Crate .env file in The root directory
-## 2. Add the following value
+## 1. Crate .env file in The root directory and Add the following value
 ```DJANGO_SECRET = 'xxxxxxxxxxxxxxxxxxxxxxxxx'```
 replace xxxxxxxxxxxxxxx with the value of your SECRET_KEY
-##  3: Setting dotenv in setting.py
+##  3: Setting dotenv in settings.py
 
-```import os
+```
+import os
 from dotenv import load_dotenv
 load_dotenv()
 ----
